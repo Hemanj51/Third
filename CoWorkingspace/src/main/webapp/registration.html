@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CoWorkSpace</title>
+	<link rel="stylesheet" type="text/css" href="regis.css">
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	
+<script type="text/javascript">
+	function myfun() {
+
+		var fname = document.getElementById("fname").value;
+		var lname = document.getElementById("lname").value;
+		var uname = document.getElementById("uname").value;
+		var retype = document.getElementById("retype").value;
+		var pass = document.getElementById("pass").value;
+		var email = document.getElementById("email").value;
+		var mobile = document.getElementById("mobile").value;
+
+		var a = /^[a-zA-z]+$/;
+		var b = /(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}/;
+		var c = /[A-Za-z0-9_]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z]{2,6}/;
+		var d = /^[789]{1}[0-9]{9}$/;
+		var e = /^[a-zA-z]+$/;
+		var f = /^[a-zA-Z0-9]{6,30}$/;
+
+		if(fname==""){
+			   document.getElementById('firstname').innerHTML="**please enter the required fields ";
+			   return false;
+		   } else
+	   if(a.test(fname)){
+		   document.getElementById('firstname').innerHTML=" ";
+		   }else{
+			   document.getElementById('firstname').innerHTML="**please enter only characters ex:java ";
+			   return false;  
+		   }
+		   if(lname==""){
+			   document.getElementById('lastname').innerHTML="**please enter the required fields ";
+			   return false;
+		   }else
+	   
+	   if(e.test(lname)){
+		   document.getElementById('lastname').innerHTML=" ";
+		   }else{
+			   document.getElementById('lastname').innerHTML="**please enter only characters ex:javaproject ";
+			   return false;  
+		   }
+		   if(uname==""){
+			   document.getElementById('username').innerHTML="**please enter the required fields ";
+			   return false;
+		   }else
+			      
+	   if(f.test(uname)){
+		   document.getElementById('username').innerHTML=" ";
+		   }else{
+			   document.getElementById('username').innerHTML="**please enter atleast six characters containing numbers ex:user1234 or username ";
+			   return false;  
+		   } 
+		   if(retype==""){
+			   document.getElementById('retypepassword').innerHTML="**please enter the required fields ";
+			   return false;
+		   }else
+	   
+	     if(b.test(retype)){
+		   document.getElementById('retypepassword').innerHTML=" ";
+		   }else{
+			   document.getElementById('retypepassword').innerHTML="**must be atleast 8 characters with numbers,symbols ex:1@abcdfe";
+			   return false;  
+		
+	  	   }
+		   if(pass==""){
+			   document.getElementById('password').innerHTML="**please enter the required fields ";
+			   return false;
+		   }else
+
+	    if(retype.match(pass)){
+		   document.getElementById('password').innerHTML=" ";
+		   }else{
+			   document.getElementById('password').innerHTML="** password is miss matching enter above password only ex:1@abcdef";
+
+			   return false;  
+		
+	  	   }
+		   if(email==""){
+			   document.getElementById('emailid').innerHTML="**please enter the required fields ";
+			   return false;
+		   }else
+	   if(c.test(email)){
+		   document.getElementById('emailid').innerHTML=" ";
+		   }else{
+			   document.getElementById('emailid').innerHTML="**please enter valid email ex:projectj51@gmail.com ";
+			   return false;  
+		   }
+		   if(mobile==""){
+			   document.getElementById('mobileno').innerHTML="**please enter the required fields ";
+			   return false;
+		   }else
+	   if(d.test(mobile)){
+		   document.getElementById('mobileno').innerHTML=" ";
+		   }else{
+			   document.getElementById('mobileno').innerHTML="**please enter 10digits number ex:7981254536 must be start with 7,8,9 ";
+			   return false;  
+		   }
+
+	}
+</script>
+</head>
+<body>
+	<div class="banner">
+	<div id="logo">
+		<img src="./img/workspaceLogo.PNG">
+		</div>
+	<div class="login-box">
+	<h1>Register here</h1>
+	<form  action="register" method="post" onsubmit="return myfun()">
+			<div class="form-group">
+				<p>FirstName</p>
+				<input type="text" name="firstname" id="fname" class="form-control"/>
+				<span id="firstname" class="text-danger font-weight-bold"></span>
+			</div>
+				<div class="form-group">
+				<p>LastName</p>
+		<input type="text" name="lastname" id="lname"  class="form-control" />
+				<span id="lastname" class="text-danger font-weight-bold"></span>
+				</div>
+				<div class="form-group">
+				<p>UserName</p>
+				<input type="text" name="username" id="uname"  class="form-control"/>
+				<span id="username" class="text-danger font-weight-bold">
+				</div>
+				<div class="form-group">
+				<p>Password</p>
+				<td><input type="Password" name="retypepassword" id="retype"  class="form-control"/>
+				<span id="retypepassword" class="text-danger font-weight-bold"></span>
+				</div>
+				<div class="form-group">
+				<p>Retype Password</p>
+				<input type="Password" name="password" id="pass"  class="form-control"/>
+				<span id="password" class="text-danger font-weight-bold">
+				</div>
+				<div class="form-group">
+				<p>EmailID</p>
+				<input type="text" name="emailid" id="email"  class="form-control"/>
+				<span id="emailid" class="text-danger font-weight-bold"></span>
+				</div>
+				<div class="form-group">
+				<p>Mobile Number</p>
+				<input type="text" name="mobile" id="mobile"  class="form-control"/>
+				<span id="mobileno" class="text-danger font-weight-bold"></span></span>
+				</div>
+			 <br> <br>
+				<a href="#"> <input type="submit" value="Register"> <input
+					type="submit" value="Reset" class="Reset">
+				</a> <br> <br>
+		
+		</div>
+		</form>
+	</div>
+	</form>
+<!-- <form action="register" method="post">
+<p>FirstName</p>
+<input type="text" name="firstname">
+<p>LastName</p>
+<input type="text" name="lastname">
+<p>UserName</p>
+<input type="text" name="username">
+<p>Password</p>
+<input type="Password" name="password">
+<p>EmailId</p>
+<input type="text" name="emailid">
+<p>Mobile </p>
+<input type="text" name="mobile">
+<br>
+<br>
+<a href="#">
+<input type="submit"  value="Register">
+
+<input type="submit"  value="Reset" class="Reset">
+</a>
+<br>
+<br>
+</div>
+</form>	
+</div>
+</form> -->
+<div class="backg">
+</div>
+</div>
+</body>
+</html>

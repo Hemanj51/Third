@@ -1,0 +1,11 @@
+com.space.bean
+com.space.controller.admin
+com.space.controller.adminaminities
+com.space.controller.adminbranch
+com.space.controller.adminlocation
+com.space.controller.adminoffice
+com.space.controller.adminuser
+com.space.controller.user
+com.space.dao
+com.space.daoimpl
+com.space.db

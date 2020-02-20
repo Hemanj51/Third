@@ -1,0 +1,6 @@
+2020-02-20 21:13:05 [http-nio-8283-exec-1] INFO  UserDAOimpl:59 - Register method called
+  2020-02-20 21:13:05 [http-nio-8283-exec-1] INFO  UserDAOimpl:61 - Register method prepared statement called
+  2020-02-20 21:13:05 [http-nio-8283-exec-1] INFO  RegisterServlet:59 - Registration Successfully done.please login continue...
+  2020-02-20 21:14:06 [http-nio-8283-exec-3] INFO  UserDAOimpl:28 - Login method called
+  2020-02-20 21:14:06 [http-nio-8283-exec-3] INFO  UserDAOimpl:30 - Login prepared statement called
+  

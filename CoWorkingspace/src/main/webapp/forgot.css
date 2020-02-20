@@ -1,0 +1,86 @@
+@CHARSET "ISO-8859-1";
+body{
+	top:0px;
+	padding-top:0;
+	margin: auto;
+	position: relative;
+	width: auto;
+	height: auto;
+}
+#logo img{
+	position: absolute;
+	height: 80px;
+	width: 340px;
+	
+	float: left;
+}
+.banner{
+	height: 81px;
+	background-color: black;
+}
+
+.backg{
+	background: url('./img/secure.jpg') top center no-repeat;
+	background-size: cover;
+	background-position: center;
+	height:100px;
+	min-height:676px;
+	margin-top: 0px; 
+	margin-left: 0px;
+}
+h1{
+	margin:0;
+	padding:0 0 20px;
+	text-align: center;
+	font-size: 22px;
+}
+.for-box{
+     width: 320px;
+    height: 423px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+.for-box input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.for-box input[type="text"], input[type="password"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 22px;
+    color: #fff;
+    font-size: 16px;
+}
+.for-box input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #30BCBC;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+.for-box a{
+	text-decoration: none;
+	font-size: 14px;
+	color: #FFFEFE;
+	transition:all .3s;
+}
+.for-box a:hover{
+	color: #F28A4F;
+	transition:all .3s;
+}
+.for-box input[type="submit"]:hover{
+	background-color: #CF4242;
+
+}

@@ -1,0 +1,117 @@
+@CHARSET "ISO-8859-1";
+body{
+	top:0px;
+	padding-top:0;
+	margin: auto;
+	position: relative;
+	width: auto;
+	height: auto;
+}
+#logo img{
+	position: absolute;
+	height: 80px;
+	width: 340px;
+	
+	float: left;
+}
+.banner{
+	height: 81px;
+	background-color: black;
+}
+
+.back{
+	background: url('./img/back.jpg') top center no-repeat;
+	background-size: cover;
+	background-position: center;
+	height:100px;
+	min-height: 673px;
+	margin-top: 0px; 
+	margin-left: 0px;
+}
+.navigate{
+	float: right;
+	list-style: none;
+	margin-top: 30px;
+}
+.navigate li{
+	display: inline-block;
+}
+.navigate li a {
+	color: white;
+	text-decoration: none;
+	padding: 5px 20px;
+	font-family: "verdana","sans-serif";
+	font-size: 20px
+}
+.ho a{
+	border: 1px solid grey;
+	border-radius: 20px;
+	background-color: #717D7E;
+}
+ .navigate li a:hover {
+	border: 1px solid grey;
+	border-radius:20px; 
+	background-color: #717D7E;
+}
+.login-box{
+    width: 320px;
+    height: 420px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+h1{
+	margin:0;
+	padding:0 0 20px;
+	text-align: center;
+	font-size: 22px;
+}
+}
+.login-box input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.login-box input[type="text"], input[type="password"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 22px;
+    color: #fff;
+    font-size: 16px;
+}
+.login-box input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #1c8adb;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+.login-box a{
+	text-decoration: none;
+	font-size: 14px;
+	color: #FFFEFE;
+}
+.login-box a:hover{
+	color: #F28A4F;
+}
+#new-user a{
+	margin-left: 40px;
+
+}
+.login-box input[type="submit"]:hover{
+	background-color: #CF4242;
+
+}
+.login-box h1{
+	font-size: 35px;
+}

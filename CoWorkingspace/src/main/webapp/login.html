@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CoWorkSpace</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+
+   function myfun(){
+	   var uname=document.getElementById("user").value;
+	   
+	   var pass=document.getElementById("pass").value;
+	  
+	   var a=/^[a-zA-Z0-9]{6,30}$/;
+	   var b=/(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}/;
+	   
+	   if(a.test(uname)){
+		   document.getElementById('username').innerHTML=" ";
+		   }else{
+			   document.getElementById('username').innerHTML="**please enter vaild username ex:home12 username aleast have 6 letters ";
+			   return false;  
+		   }      
+	   if(b.test(pass)){
+			   document.getElementById('password').innerHTML=" ";
+		   }else{
+			   document.getElementById('password').innerHTML="**please enter vaild password ex:1@asdcbfe aleast hvae 8 letters";
+			   return false;  
+		
+	  	   }
+
+   }
+   </script>
+</head>
+<body>
+	<div class="banner">
+	<div id="logo">
+		<img src="./img/workspaceLogo.PNG">
+		
+	</div>
+</div>
+	<div class="back">
+		
+	</div>
+	<div class="login-box">
+	<h1>Login here</h1>
+<form  action="login" method="post" onsubmit="return myfun()">
+<div class="form-group">
+<p>Username</p>
+<input type="text" name="username" id="user" class="form-control">
+<span id="username" class="text-danger"></span>
+</div>
+<div class="form-group">
+<p>Password</p>
+<input type="Password" name="password" id="pass" class="form-control">
+<span id="password" class="text-danger"></span>
+</div>
+
+<a href="#">
+<input type="submit"  value="Login" ></a>
+<br>
+<br>
+<a href="forgot.html">Forgot Password?</a>
+<br>
+<br>
+<br>
+<br>
+<div id="new-user">
+<a href="registration.html">New User?Register Here.</a>
+</div>
+</form>	
+</div>
+
+</form>
+</body>
+</html>

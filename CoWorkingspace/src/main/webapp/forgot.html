@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>forgotpassword</title>
+<link rel="stylesheet" type="text/css" href="forgot.css">
+<!-- jQuery library -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+
+	function myfun() {
+		
+		var uname = document.getElementById("user").value;
+		var email = document.getElementById("email").value;
+
+		var a = /^[a-zA-Z0-9]{6,30}$/;
+		var b = /[A-Za-z_0-9]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z]{2,6}/;
+
+		if(a.test(uname)){
+			   document.getElementById('username').innerHTML=" ";
+			   }else{
+				   document.getElementById('username').innerHTML="**please enter vaild username ex:home12 username aleast have 6 letters ";
+				   return false;  
+			   }      
+	
+		if (b.test(email)) {
+			document.getElementById('emailid').innerHTML = " ";
+		} else {
+			document.getElementById('emailid').innerHTML = "**please enter vaild emailid ex:username12@gmail.com ";
+			return false;
+		}
+	}
+</script>
+</head>
+<body>
+	<div class="banner">
+		<div id="logo">
+			<img src="./img/workspaceLogo.PNG">
+		</div>
+		<div class="login-box">
+			<form  action="forgot" method="post" onsubmit="return myfun()">
+				<div class="for-box">
+					<h1>Forgot Password</h1>
+					<div class="form-group">
+						<p>Username</p>
+						<input type="text" name="username" id="user" class="form-control">
+						<span id="username" class="text-danger font-weight-bold"></span>
+					</div>
+					<div class="form-group">
+						<p>EmailID</p>
+						<input type="text" name="emailid" id="email" class="form-control" />
+						<span id="emailid" class="text-danger font-weight-bold"></span>
+					</div>
+					<input type="submit" name="submit" value="submit">
+				</div>
+			</form>
+			<!-- <form action="forgot" method="post"><div class="for-box">
+	<h1>Forgot Password</h1>
+<p>UserName</p>
+<input type="text" name="username">
+<p>EmailID</p>
+<input type="text" name="emailid">
+<input type="submit" name="submit" value="submit">
+</div>
+</form> -->
+		</div>
+	</div>
+	<div class="backg"></div>
+</body>
+</html>
